@@ -1,0 +1,32 @@
+
+<div>
+<h1> ---Welcome Page--- </h1><br>
+<h2> Your IP is: <%= @request_ip  %> </h2>
+<h2> Your PORT is: <%= @request_port  %> </h2>
+
+  <form action="/votes" method="post">
+
+    <label for="name">Name</label>
+    <input type="text" name="name"></br>
+
+    <label for="category">Category</label>
+    <select name="category">
+      <option value="SM">Solution Manager</option>
+      <option value="RM">Regional Manager</option>
+      <option value="DEV">Developer</option>
+      <option value="QA">Qa Engineer</option>
+    </select></br>
+
+    <label for="temperature">Vote (between 17-28)</label>
+    <input type="text" name="temperature"></br>
+
+    <input type="submit" value="Vote">
+  </form>
+  
+  <h3> Current Votes: <%= @current_votes  %> </h3>
+
+    <form action="/calculate_votes" method="post">
+        <input type="submit" value="Calculate Winner">
+    </form>
+
+</div>

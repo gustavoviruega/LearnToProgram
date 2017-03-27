@@ -15,10 +15,12 @@ class AirConditioner
   def turn_on
     p 'Air conditioner turned on'
     @status = 'ON'
+    return "The Air Conditioner is ON"
   end
 
   def turn_off
     p 'Air conditioner turned off'
     @status = 'OFF'
+    return "The Air Conditioner is OFF"
   end
 end
