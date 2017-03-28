@@ -1,6 +1,13 @@
-<div>
-  <h3> The winning temperaure is: <%= @result  %> </h3>
-      <form action="/back" method="post">
-        <input type="submit" value="Back">
+<head>
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body class=container>
+
+<div class="panel panel-default" align="center">
+
+  <h3> The winning temperaure is: <u><%= @result  %> </u></h3>
+    <form action="/" method="get">
+        <a class="btn btn-primary" href="http://localhost:4567/">Back</a>
     </form>
 </div>
+</body>
