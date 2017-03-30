@@ -1,9 +1,9 @@
 # Este archivo deberia llamarse Main.rb
 # El controlador delega tareas, deriva. Menos logica en el controller mas logica en el modelo. La aplicacion vive en el modelo.
-# Siempre hay que levantar antes la BD de MongoDB ejecutando este comando en consola:
+# Siempre hay que levantar antes la BD de MongoDB ejecutando este comando en consola (puede ser la consola de visual studio code, directamente desde donde estoy parado):
 # "c:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath "C:\Projects\Mongo"
 # Para ejecutar levantar la consola de ruby. Buscar en windows "Start Command Prompt with Ruby".
-# Levanto el server con "ruby controller.rb".
+# Levanto el server con "ruby controller.rb" ejecutandolo desde C:\Projects\Curso Web Programming.
 # Abrir en el browser http://localhost:4567/
 # Crtl+C tiro abajo el server.
 
