@@ -118,3 +118,11 @@ post '/calculate_votes' do
     @result = ec.calculate_winning_temperature(Employee.all)
     erb :calculates_votes
 end
+
+get '/css' do
+    erb :css
+end
+
+get '/csslayout' do
+    erb :csslayout
+end
