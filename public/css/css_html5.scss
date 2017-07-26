@@ -1,0 +1,67 @@
+/*Para que este añidamiento funcione hay que compliar este archivo .scss (con Compass),
+esto genera un .css y luego es ese el archivo que hay que linkear en el html*/  
+header {
+  text-align: center;
+  color: red;
+  span {
+    color: blue;
+  }
+}
+
+span {
+    color: green;
+  }
+
+div {
+    background: lightblue;
+    padding: calc(1% + 10px);
+}
+
+.row {
+    background: none;
+    border: none;
+}
+
+/*Margin-left y margin-right = auto funciona siempre que haya un ancho definido*/  
+.sign {
+  width: calc(60% - 35px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main,
+aside,
+header,
+footer,
+div {
+    text-align: center;
+    border: 3px solid black;
+}
+
+main,
+aside {
+  height: 30%;
+  margin: 10px;
+  padding: 10px;
+  background: green;
+}
+
+main {
+  float:left;
+  width: 65%;
+}
+
+aside {
+  float:right;
+  width: 30%;
+}
+
+.top,
+footer {
+  background: yellow;
+  width: 100%;
+  padding: 10px;
+  clear:both;
+}

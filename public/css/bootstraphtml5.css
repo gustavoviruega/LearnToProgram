@@ -1,0 +1,37 @@
+* {
+      text-align: center;
+}
+
+.row {
+    background: none;
+    border: none;
+    padding: 20px;
+}
+
+header,
+main,
+aside,
+footer {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background: lightgray;
+    border: 3px solid black;
+}
+
+main, 
+aside {
+    background: lightskyblue;
+    border: 2px solid black;
+    height: 20%;
+}
+
+footer {
+    background: lightgreen;
+    border: 5px solid black;
+}

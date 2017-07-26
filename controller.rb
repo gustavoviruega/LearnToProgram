@@ -119,10 +119,18 @@ post '/calculate_votes' do
     erb :calculates_votes
 end
 
-get '/css' do
-    erb :css
+get '/css/css' do
+    erb :'css/css'
 end
 
-get '/csslayout' do
-    erb :csslayout
+get '/css/csslayout' do
+    erb :'css/csslayout'
+end
+
+get '/css/csshtml5' do
+    erb :'css/csshtml5'
+end
+
+get '/bootstrap/html5' do
+    erb :'/bootstrap/html5'
 end
