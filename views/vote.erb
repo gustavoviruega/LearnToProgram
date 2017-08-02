@@ -1,0 +1,53 @@
+<head>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="font-awesome\css\font-awesome.min.css">
+</head>
+<body class=container>
+
+<div class="jumbotron">
+  <h1>Air Conditioner Voting System <i class="fa fa-snowflake-o fa-1x" aria-hidden="true"></i></h1>
+  <p><%= @welcome_message %></p>
+</div>
+
+<div class="col-md-8 form-group">
+        <form action="/votes" method="post">
+
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" value="<%= @last_employee_name %>"></br>
+
+            <label for="category">Category</label>
+            <select name="category" class="form-control">
+                <!--Aca se usa un If invertido. Primero dice que tiene que seleccionar la opcion y luego la condicion.-->
+            <option value="SM" <%= "selected=\"selected\"" if @last_employee_category == "SM"%>>
+                Solution Manager
+            </option>
+            <option value="RM" <%= "selected=\"selected\"" if @last_employee_category == "RM"%>>
+                Regional Manager
+            </option>
+            <option value="DEV" <%= "selected=\"selected\"" if @last_employee_category == "DEV"%>>
+                Developer
+            </option>
+            <option value="QA" <%= "selected=\"selected\"" if @last_employee_category == "QA"%>>
+                Qa Engineer
+            </option>
+            </select></br>
+
+            <label for="temperature">Vote (between 17-28)</label>
+            <input type="text" name="temperature" class="form-control" value="<%= @last_employee_temperature %>"></br>
+
+            <input type="submit" value="Vote" class="btn btn-primary">
+        </form>
+</div>
+
+<div class="col-md-4 form-group">
+    <form action="/calculate_votes" method="post">
+        <h4><small> Current Votes: <u><%= @current_votes  %></u> </small></h4>
+        <input type="submit" value="Calculate Winner" class="btn btn-warning">
+        <h4><small> <%= @notice  %> </small></h4>
+    </form>
+</div>
+
+<div class="col-md-12 panel panel-default" align="center">
+  <h6> Your IP is: <%= @request_ip  %>, the PORT is: <%= @request_port  %> and your Session Value is: <%= @sessionvalue  %> </h6>
+</div>
+</body>

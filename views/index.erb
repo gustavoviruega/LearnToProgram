@@ -1,53 +1,51 @@
+<!-- Levanto el server con "ruby controller.rb" ejecutandolo desde C:\Projects\Curso Web Programming. -->
+
 <head>
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link rel="stylesheet" href="font-awesome\css\font-awesome.min.css">
+    <title> Learnning to Program - Pages </title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.css">
 </head>
-<body class=container>
 
-<div class="jumbotron">
-  <h1>Air Conditioner Voting System <i class="fa fa-snowflake-o fa-1x" aria-hidden="true"></i></h1>
-  <p><%= @welcome_message %></p>
-</div>
+<section class="container-fluid">
+    <header class="page-header"><h1>Learning to Program - Pages</h1></header>
+    <main class="row">
+    <article class="col-xs-12 col-sm-6">
 
-<div class="col-md-8 form-group">
-        <form action="/votes" method="post">
+        <img src="http://lorempixel.com/400/200/">
 
-            <label for="name">Name</label>
-            <input type="text" name="name" class="form-control" value="<%= @last_employee_name %>"></br>
+        <p class="alert alert-success">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+        <label><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages:</label>
+        <ol>
+            <li><a href="vote">Web Programing Course - Voting System </a><label class="glyphicon glyphicon-collapse-down" for="descopen1"></label></li>
+                <input type="checkbox" id="descopen1">
+                <p class="desc" id="desc1" hidden>Voting system develop with ruby, mongo, css, bootstrap, font-awesome...</p>
+            <li><a href="css/basics">Pluralsight - CSS - Basics </a><label class="glyphicon glyphicon-collapse-down" for="descopen2"></label></li>
+                <input type="checkbox" id="descopen2">
+                <p class="desc" id="desc1" hidden>Basic HTML/CSS page</p>
+            <li><a href="css/layout">Pluralsight - CSS - Layout </a><label class="glyphicon glyphicon-collapse-down" for="descopen3"></label></li>
+                <input type="checkbox" id="descopen3">
+                <p class="desc" id="desc1" hidden>Basic page and css layout design. Using relative and fixed positions, float and clear properties, images...</p>
+            <li><a href="css/html5">CSS/HTML5 Course - HTML5 Basics </a><label class="glyphicon glyphicon-collapse-down" for="descopen4"></label></li>
+                <input type="checkbox" id="descopen4">
+                <p class="desc" id="desc1" hidden>Basic page using core HTML5 elemtens, comparing design with Bootstrap and without it.</p>
+            <li><a href="css/mediaquery">CSS/HTML5 Course - Mediaquery </a><label class="glyphicon glyphicon-collapse-down" for="descopen5"></label></li>
+                <input type="checkbox" id="descopen5">
+                <p class="desc" id="desc1" hidden>Page that uses various HTML5 elements, HTML5 validations, Bootstrap grid, and the checkbox hack trick.</p>
+            <li><a href="css/flexbox">CSS/HTML5 Course - Flexbox and Gradient Backgrounds </a><label class="glyphicon glyphicon-collapse-down" for="descopen6"></label></li>
+                <input type="checkbox" id="descopen6">
+                <p class="desc" id="desc1" hidden>Super basic page that uses flexbox on a html5 section element, and gradient colors.</p>
+            <li><a href="bootstrap/basics">CSS/HTML5 Course - Bootstrap Basics </a><label class="glyphicon glyphicon-collapse-down" for="descopen7"></label></li>
+                <input type="checkbox" id="descopen7">
+                <p class="desc" id="desc1" hidden>Basic bootstrap layout.</p>
+            <li><a href="bootstrap/introduction">Pluralsight - Bootstrap Introduction - Core Concepts </a><label class="glyphicon glyphicon-collapse-down" for="descopen8"></label></li>
+                <input type="checkbox" id="descopen8">
+                <p class="desc" id="desc1" hidden>Bootstrap page applying the core concepts: classes, container, table, bootstrap override, grid, offset...</p>
+        </ol>
 
-            <label for="category">Category</label>
-            <select name="category" class="form-control">
-                <!--Aca se usa un If invertido. Primero dice que tiene que seleccionar la opcion y luego la condicion.-->
-            <option value="SM" <%= "selected=\"selected\"" if @last_employee_category == "SM"%>>
-                Solution Manager
-            </option>
-            <option value="RM" <%= "selected=\"selected\"" if @last_employee_category == "RM"%>>
-                Regional Manager
-            </option>
-            <option value="DEV" <%= "selected=\"selected\"" if @last_employee_category == "DEV"%>>
-                Developer
-            </option>
-            <option value="QA" <%= "selected=\"selected\"" if @last_employee_category == "QA"%>>
-                Qa Engineer
-            </option>
-            </select></br>
+    </article>
+    <script src="../bootstrap/js/bootstrap.js"></script>
 
-            <label for="temperature">Vote (between 17-28)</label>
-            <input type="text" name="temperature" class="form-control" value="<%= @last_employee_temperature %>"></br>
-
-            <input type="submit" value="Vote" class="btn btn-primary">
-        </form>
-</div>
-
-<div class="col-md-4 form-group">
-    <form action="/calculate_votes" method="post">
-        <h4><small> Current Votes: <u><%= @current_votes  %></u> </small></h4>
-        <input type="submit" value="Calculate Winner" class="btn btn-warning">
-        <h4><small> <%= @notice  %> </small></h4>
-    </form>
-</div>
-
-<div class="col-md-12 panel panel-default" align="center">
-  <h6> Your IP is: <%= @request_ip  %>, the PORT is: <%= @request_port  %> and your Session Value is: <%= @sessionvalue  %> </h6>
-</div>
-</body>
+</main>
+</section>
