@@ -1,0 +1,12 @@
+/*Overriding bootstrap*/
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: lightsteelblue;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color:palevioletred;
+}
+
+img {
+    margin: 0 0 10px 0;
+}

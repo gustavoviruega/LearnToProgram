@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Pluralsight - Bootstrap Introduction - Core Concepts </title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="../css/introduction.css">
+</head>
+<body>
+<!-- container-fluid usa todo el ancho de la pantalla, container solo centra todo al medio. -->
+    <div class="container-fluid">
+        <h1 class="page-header">Sample</h1>
+        <!-- fluid grid system uses percents instead of pixels for column widths, ensures proper proportions for key screen resolutions and devices. -->
+        <div class="row-fluid">
+            <div class="col-md-4">
+                <p class="well">
+                    <span class="glyphicon glyphicon-search"></span>
+                    Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <!-- img classes: img-circle or img-rounded or img-thumbnail (can be combined). img-responsive is used to responsive sites so the image is auto-resized. -->
+                <img class="img-thumbnail img-circle img-responsive" src="http://lorempixel.com/400/200/">
+            </div>
+            <!-- col-md-offset-1 moves the columns 1 column to the right. -->
+            <div class="col-md-2 col-md-offset-1">
+                <table class="table table-striped table-hover">
+                    <tr>
+                        <th>Month</th>
+                        <th>Days</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>28 (usually)</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td>April</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>May</td>
+                        <td>30</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
