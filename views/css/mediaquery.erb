@@ -1,0 +1,56 @@
+<head>
+  <title> CSS/HTML5 Course - Mediaquery and HTML5 tricks</title>
+  <link rel="stylesheet" href="../css/mediaquery.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+
+<section>
+<main class="row">
+
+<header>HEADER</header>
+
+<article class="col-xs-12 col-sm-6">
+<img src="http://lorempixel.com/400/200/" alt="IMG1">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</article>
+
+<article class="col-xs-12 col-sm-6">
+<img src="http://lorempixel.com/400/200/" alt="IMG2">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</article>
+
+<!-- An HTML form with an input field that can contain only three letters (no numbers or special characters) -->
+<form class="col-xs-12 col-sm-12">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Tu nombre" pattern="[A-Za-z]{3}" required>
+
+    <label>Apellido
+        <input type="text" name="apellido" placeholder="Tu apellido" disabled>
+    </label>
+
+    <label>Búsqueda
+        <input type="search" name="search" placeholder="Ingrese su búsqueda">
+    </label>
+
+    <label>Desea recibir ofertas?
+        <input type="checkbox" name="of" id="ofertas">
+    </label>
+    
+    <label>Elija un color
+        <input type="color" name="color">
+    </label>
+    <br>
+
+    <label for="menuopen">Click here to hide the items</label>
+    <input type="checkbox" id="menuopen">
+    <ul class="menu">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <button type="submit" class="button">Send</button>
+</form>
+
+</main>
+</section>

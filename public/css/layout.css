@@ -1,0 +1,82 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#header {
+    text-align: center;
+    height: 100px;
+}
+
+#links {
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    width: 100px;
+    /*float: left; HERE THE LINKS SHOULD BE MOVED TO THE BEGINNING OF THE HTML
+    width: 100px;*/
+}
+
+#authorinfo {
+    position: absolute;
+    top: 120px;
+    right: 0px;
+    width: 300px;
+    /*float: left;
+    width: 300px;*/
+}
+
+#content {
+    margin-left: 105px; 
+    margin-right: 305px;
+    /*float: left;
+    width: 600px;*/
+}
+
+#buttons {
+    margin: 10px 0 10px 0;
+}
+
+#buttons input {
+    width: 120px;
+}
+
+/*The element will move 20px from bottom and 50px from the right from its default position*/
+#buttons input:nth-child(3) {
+    position: relative;
+    bottom: 20px;
+    right: 50px;
+}
+
+/*The element will move 20px from top and 50px from the left from the body of the document*/
+/*If the position is Fixed it will move 20px from top and 50px from the left from the window*/
+#buttons input:last-child {
+    position: fixed;
+    top: 320px;
+    left: 100px;
+}
+
+#figure1 {
+    float: left;
+    margin-right: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+.about {
+    background-color: lightskyblue; 
+    padding: 5px;
+    width: 50%;
+    border-bottom: 2px solid black;
+    border-left: 5px solid blue;
+    text-align: center;
+    color: white;
+    font: bold 16px 'Lucida Grande', sans-serif;
+}
+
+#figure2 {
+    width: auto;
+    height: 10%;
+}

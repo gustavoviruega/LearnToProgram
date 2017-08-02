@@ -25,8 +25,11 @@ Mongoid.load!("mongoid.yml")
 # Esto se usaba antes de implementar Mongo para contar los votos.
 votes = Array.new
 
-
 get '/' do
+    erb :index
+end
+
+get '/vote' do
   @welcome_message = "People at the office is fighting about the air conditioner temperature, " \
          "some want the air conditioner to be turned off and some want it very cold. " \
          "Lets solve this problem democratically by creating and application were they " \
@@ -47,7 +50,7 @@ get '/' do
     @last_employee_temperature ||= session['last_employee_temperature']
     @notice ||= session['notice']
     session['notice'] = nil
-    erb :index
+    erb :vote
 end
 
 # Aca usamos esto para guardar un valor en la session. Guardamos un valor que le pasamos por url, pero en realidad es
@@ -102,7 +105,7 @@ post '/votes' do
     session['last_employee_category'] = params[:category]
     session['last_employee_temperature'] = params[:temperature]
     session['notice'] = "Employee Voted Successfully!"
-    redirect '/'
+    redirect '/vote'
     # Esto estaba porque al votar antes redireccionaba a otra pagina con un mensaje.
     #erb :thanks_for_voting
 end
@@ -119,18 +122,30 @@ post '/calculate_votes' do
     erb :calculates_votes
 end
 
-get '/css/css' do
-    erb :'css/css'
+get '/css/basics' do
+    erb :'css/basics'
 end
 
-get '/css/csslayout' do
-    erb :'css/csslayout'
+get '/css/layout' do
+    erb :'css/layout'
 end
 
-get '/css/csshtml5' do
-    erb :'css/csshtml5'
+get '/css/html5' do
+    erb :'css/html5'
 end
 
-get '/bootstrap/html5' do
-    erb :'/bootstrap/html5'
+get '/bootstrap/basics' do
+    erb :'/bootstrap/basics'
+end
+
+get '/css/mediaquery' do
+    erb :'/css/mediaquery'
+end
+
+get '/css/flexbox' do
+    erb :'/css/flexbox'
+end
+
+get '/bootstrap/introduction' do
+    erb :'/bootstrap/introduction'
 end

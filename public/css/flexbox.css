@@ -1,0 +1,24 @@
+.flex
+    {
+    align-items: center;
+    background: -webkit-linear-gradient(top, white 0%, black 100%);
+    display: flex;
+    justify-content: space-between;
+}
+
+div {
+    background: -webkit-radial-gradient(blue, red, gray);
+    height: 10em;
+    width: 15%;
+    text-align: center;
+}
+
+div:first-of-type {
+    align-self:flex-start;
+    height: 5em;
+}
+
+div:last-of-type {
+    align-self:flex-end;
+    height: 5em;
+}

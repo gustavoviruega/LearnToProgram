@@ -1,0 +1,52 @@
+header {
+    background: lightgray;
+    border: 2px solid black;
+    font: bold 22px 'Lucida Grande', sans-serif;
+    height: 50px;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+article {
+    font: 12px 'Lucida Grande', sans-serif;
+    text-align: center;
+}
+
+p {
+    border: 1px solid gray;
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+img {
+        margin: 0 0 10px 0;
+}
+
+#menuopen {
+    display: none;
+}
+
+/*El + implica que los elementos tienen ser hermanos y consecutivos. Con el ~ tienen que ser solo hermanos.*/
+input:checked + .menu {
+    display: none;
+}
+
+.button {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    
+    header {
+    background: #66BB6A;
+}
+
+/*    
+    --THIS IS REPLACED BY BOOTSTRAP--
+    article {
+        display: inline-block;
+        width: 49%;
+    }
+*/
+
+}
