@@ -149,3 +149,11 @@ end
 get '/bootstrap/introduction' do
     erb :'/bootstrap/introduction'
 end
+
+get '/bootstrap/javascript' do
+    erb :'/bootstrap/javascript'
+end
+
+get '/bootstrap/carousel' do
+    erb :'/bootstrap/carousel'
+end

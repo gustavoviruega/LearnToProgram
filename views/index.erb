@@ -1,56 +1,110 @@
 <!-- Levanto el server con "ruby controller.rb" ejecutandolo desde C:\Projects\Curso Web Programming. -->
 
 <head>
-    <title> Learnning to Program - Pages </title>
-    <link rel="stylesheet" href="../css/index.css">
+    <title> Learnning to Program - Pages</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <!-- esto es para hacer el navbar responsive, si se achica la pantalla aparte un boton de menu. -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
 
+        <div class="collapse navbar-collapse" id="example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Location</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+    
+<!-- container-fluid usa todo el ancho de la pantalla, container solo centra todo al medio. -->
 <section class="container-fluid">
-    <header class="page-header"><h1>Learning to Program - Pages</h1></header>
-    <main class="row">
-    <article class="col-xs-12 col-sm-6">
+    <header class="page-header"><h2>Learning to Program - Pages</h2></header>
+    <main class="row-fluid">
+    <article class="col-sm-12 col-md-6">
 
-        <div class="thumbnail">
-            <img class="img-rounded" src="http://lorempixel.com/400/200/">
-            <div class="caption">
-                <p id="caption">This is the image caption</p>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="thumbnail">
+                    <img class="img-rounded img-responsive" src="http://lorempixel.com/400/200/">
+                    <div class="caption">
+                        <p>This is the image caption</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <p class="alert alert-success">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>WELCOME!</strong> THIS IS THE SITE I USED TO LEARN WEB DEVELOPMENT TECHNIQUES.
+        </div>
     
         <label><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages:</label>
         <ol>
             <li><a href="vote">Web Programing Course - Voting System </a><label class="glyphicon glyphicon-collapse-down" for="descopen1"></label></li>
                 <input type="checkbox" id="descopen1">
-                <p class="desc" id="desc1" hidden>Voting system develop with ruby, mongo, css, bootstrap, font-awesome...</p>
+                <p class="desc text-muted" id="desc1" hidden>Voting system develop with ruby, mongo, css, bootstrap, font-awesome...</p>
             <li><a href="css/basics">Pluralsight - CSS - Basics </a><label class="glyphicon glyphicon-collapse-down" for="descopen2"></label></li>
                 <input type="checkbox" id="descopen2">
-                <p class="desc" id="desc1" hidden>Basic HTML/CSS page</p>
+                <p class="desc text-muted" id="desc1" hidden>Basic HTML/CSS page</p>
             <li><a href="css/layout">Pluralsight - CSS - Layout </a><label class="glyphicon glyphicon-collapse-down" for="descopen3"></label></li>
                 <input type="checkbox" id="descopen3">
-                <p class="desc" id="desc1" hidden>Basic page and css layout design. Using relative and fixed positions, float and clear properties, images...</p>
+                <p class="desc text-muted" id="desc1" hidden>Basic page and css layout design. Using relative and fixed positions, float and clear properties, images...</p>
             <li><a href="css/html5">CSS/HTML5 Course - HTML5 Basics </a><label class="glyphicon glyphicon-collapse-down" for="descopen4"></label></li>
                 <input type="checkbox" id="descopen4">
-                <p class="desc" id="desc1" hidden>Basic page using core HTML5 elemtens, comparing design with Bootstrap and without it.</p>
+                <p class="desc text-muted" id="desc1" hidden>Basic page using core HTML5 elemtens, comparing design with Bootstrap and without it.</p>
             <li><a href="css/mediaquery">CSS/HTML5 Course - Mediaquery </a><label class="glyphicon glyphicon-collapse-down" for="descopen5"></label></li>
                 <input type="checkbox" id="descopen5">
-                <p class="desc" id="desc1" hidden>Page that uses various HTML5 elements, HTML5 validations, Bootstrap grid, and the checkbox hack trick.</p>
+                <p class="desc text-muted" id="desc1" hidden>Page that uses various HTML5 elements, HTML5 validations, Bootstrap grid, and the checkbox hack trick.</p>
             <li><a href="css/flexbox">CSS/HTML5 Course - Flexbox and Gradient Backgrounds </a><label class="glyphicon glyphicon-collapse-down" for="descopen6"></label></li>
                 <input type="checkbox" id="descopen6">
-                <p class="desc" id="desc1" hidden>Super basic page that uses flexbox on a html5 section element, and gradient colors.</p>
+                <p class="desc text-muted" id="desc1" hidden>Super basic page that uses flexbox on a html5 section element, and gradient colors.</p>
             <li><a href="bootstrap/basics">CSS/HTML5 Course - Bootstrap Basics </a><label class="glyphicon glyphicon-collapse-down" for="descopen7"></label></li>
                 <input type="checkbox" id="descopen7">
-                <p class="desc" id="desc1" hidden>Basic bootstrap layout.</p>
+                <p class="desc text-muted" id="desc1" hidden>Basic bootstrap layout.</p>
             <li><a href="bootstrap/introduction">Pluralsight - Bootstrap Introduction - Core Concepts </a><label class="glyphicon glyphicon-collapse-down" for="descopen8"></label></li>
                 <input type="checkbox" id="descopen8">
-                <p class="desc" id="desc1" hidden>Bootstrap page applying the core concepts: classes, container, table, bootstrap override, grid, offset, media query, ...</p>
+                <p class="desc text-muted" id="desc1" hidden>Bootstrap page applying the core concepts: classes, container, table, bootstrap override, grid, offset, media query, buttons, typography, forms, tabs, navbars, validator.js plugin...</p>
+            <li><a href="bootstrap/javascript">Pluralsight - Bootstrap Introduction - Javascript </a><label class="glyphicon glyphicon-collapse-down" for="descopen9"></label></li>
+                <input type="checkbox" id="descopen9">
+                <p class="desc text-muted" id="desc1" hidden>Bootstrap page applying Javascript. Buttons, Modals, Tooltips, Popover, Scrollspy, etc</p>
+            <li><a href="bootstrap/carousel">Pluralsight - Bootstrap Introduction - Bootstrap 4 - Carousel </a><label class="glyphicon glyphicon-collapse-down" for="descopen10"></label></li>
+                <input type="checkbox" id="descopen10">
+                <p class="desc text-muted" id="desc1" hidden>Bootstrap 4 - Carousel</p>
         </ol>
 
-    </article>
-    <script src="../bootstrap/js/bootstrap.js"></script>
+        <address>
+            <span class="badge">Gustavo Viruega - Software QA Engineer</span><br />
+            Rioja 2487<br />
+            Rosario, Santa Fe<br />
+            Argentina<br />
+            <abbr title="Phone number">P:</abbr>(341) 5 142546<br />
+        </address>
 
-</main>
+    </article>
+    <script src="../jquery/jquery-3.2.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    </main>
 </section>
+</body>

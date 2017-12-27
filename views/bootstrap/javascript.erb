@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Pluralsight - Bootstrap Introduction - Javascript </title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/introduction.css">
+</head>
+<!-- todos estos data tags son para el navspy -->
+<body data-spy="scroll" data-target=".navspy" data-offset="100">
+<!-- container-fluid usa todo el ancho de la pantalla, container solo centra todo al medio. -->
+    <div class="container-fluid">
+        <h1 class="page-header">Pluralsight - Bootstrap Introduction - Javascript</h1>
+        
+        <!-- fluid grid system uses percents instead of pixels for column widths, ensures proper proportions for key screen resolutions and devices. -->
+        <div class="row-fluid">
+
+            <div class="col-md-1">
+                <section class="navspy">
+                    <ul id="navigation" class="nav nav-pills nav-stacked affix">
+                        <li><a href="#buttons">Buttons</a></li>
+                        <li><a href="#radiobuttons">Radios</a></li>
+                        <li><a href="#dropdown">Dropdown</a></li>
+                        <li><a href="#modal">Modal</a></li>
+                        <li><a href="#tooltips">Tooltips</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="col-md-11">
+                <!-- data-toggle="buttons-checkbox" uses the bootstrap.js-->
+                <h2 id="buttons">Buttons as checkboxes</h2>
+
+                <div class="btn-group" id="btngroup" role="group" data-toggle="buttons-checkbox">
+                    <button type="button" class="btn btn-default">Left</button>
+                    <button type="button" class="btn btn-default">Middle</button>
+                    <button type="button" class="btn btn-default">Right</button>
+                </div>
+
+                <button id="getbuttonstates" type="button" class="btn btn-primary">Retrive button states</button>
+
+                <div id="buttonstates">
+
+                </div>
+
+                <br>
+
+                <!-- The attribute "data-something-text" tells bootstrap to insert or replace a text into a button by using javascript-->
+                <div class="form-inline row">
+                    <div class="form-group col-md-2">
+                        <button id="imageSaverComplete" type="button" class="btn btn-primary" 
+                            data-loading-text="Saving..." 
+                            data-complete-text="Saved! Try another?">
+                        Save the image</button> 
+                        <div>
+                            <small class="form-text text-muted">Button transition to Complete</small>    
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button id="imageSaverReset" type="button" class="btn btn-primary" 
+                            data-loading-text="Saving...">
+                        Save the image</button>
+                        <div>
+                            <small class="form-text text-muted">Button transition to Reset</small>    
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <!-- button groups. to display the button vertically just replace the btn-group class on the div below for the btn-group-vertical class-->
+                <h2 id="radiobuttons">Vertical buttons as radio buttons</h2>
+                <div class="btn-group-vertical" role="group" data-toggle="buttons-radio">
+                    <button type="button" data-toggle="button" class="btn btn-default">Top</button>
+                    <button type="button" data-toggle="button" class="btn btn-default">Middle</button>
+                    <button type="button" data-toggle="button" class="btn btn-default">Bottom</button>
+                </div>
+                
+                <hr />
+
+                <h2 id="dropdown">Dropdown</h2>
+                <!-- data-toggle="dropdown" uses the bootstrap.js. the button control can be also an <a> element-->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Dropdown link</a></li>
+                            <li class="disabled"><a href="#">Dropdown link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Dropdown link</a></li>
+                        </ul>
+                    </div>
+                
+                <hr />
+
+                <h2 id="modal">Modals</h2>
+                <a href="#themodal" role="button" class="btn btn-primary" data-toggle="modal">Launch a modal dialog</a>
+
+                <div id="themodal" class="modal fade">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- data-dismiss="modal" closes the modal-->
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h3>Modal header</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to do this?</p>
+                                <div class="progress progress-striped">
+                                    <div id="doitprogress" class="progress-bar" role="progressbar"></div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn" data-dismiss="modal">Close</a>
+                                <a id="yesbutton" href="#" class="btn btn-primary" data-loading-text="Doing it...">Yes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+                
+                <h2 id="tooltips">Tooltips</h2>
+                
+                The <a id="cpu" href="#" rel="tooltip" title="central processing unit" data-placement="right" class="initialism">CPU</a>, which performs most of the calculations which enable a computer to function, and is sometimes referred to as the brain of the computer. It is usually cooled by a heatsink and fan, or water-cooling system. Most newer CPUs include an on-die <a href="#" rel="popover" data-content="A graphics processing unit (GPU) is a specialized electronic circuit designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display device." data-original-title="Graphics Processing Unit">GPU</a>. The clock speed of CPUs governs how fast it executes instructions, and is measured in GHz; typical values lie between 1 GHz and 5 GHz. Many modern computers have the option to overclock the CPU which enhances performance at the expense of greater thermal output and thus a need for improved cooling.
+                
+                <hr />
+
+        </div>
+    </div>
+    <script src="../jquery/jquery-3.2.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+    <script>
+        //This is the DOM ready event
+        $(function () {
+            //Wrap the click event of the button with ID "getbuttonstates"
+            $("#getbuttonstates").click(function () {
+                //Creates an empty var called output
+                var output ="";
+                //When the user clicks on the button, we go to the button group with ID "btngroup", look at each of the children inside and build an output string.
+                //The output string takes the text from each button and add a "true" or "false" string whether the button has the "active" class.
+                $("#btngroup").children().each(function () {
+                    output += $(this).text() + " is " + $(this).hasClass("active") + " ";
+                });
+                //Prints the text of the output var on the div with ID "buttonstates".
+                $("#buttonstates").text(output);
+            });
+
+            //Wrap the click event of the buttin with ID "imageSaverComplete"
+            $("#imageSaverComplete").click(function () {
+                //When the user clicks on the button it gets a reference to the button by creating the btn variable.
+                var btn = $(this);
+                //Then it invokes the jQuery "button" method and pass "loading" as parameter. That parameter tells bootstrap to look for something "data-parameter-text".
+                //It will also change the state of the button to disable, permanently.
+                btn.button("loading");
+
+                //This call the function after 2 seconds, and changes the state of the button to the one setted on "data-complete-text".
+                setTimeout(function() {
+                    btn.button("complete");
+                }, 2000);
+
+            });
+
+            //Wrap the click event of the buttin with ID "imageSaverReset"
+            $("#imageSaverReset").click(function () {
+                //When the user clicks on the button it gets a reference to the button by creating the btn variable.
+                var btn = $(this);
+                //Then it invokes the jQuery "button" method and pass "loading" as parameter. That parameter tells bootstrap to look for something "data-parameter-text".
+                //It will also change the state of the button to disable, permanently.
+                btn.button("loading");
+
+                //This call the function after 2 seconds, and changes the state of the button to the previous state by resetting the button ("reset" is a specific method of the button).
+                setTimeout(function() {
+                    btn.button("reset");
+                }, 2000);
+
+            });
+
+            //This references to the buttons belongs directly to the DOM ready event
+            var yesButton = $("#yesbutton");
+            var theModal = $("#themodal");
+            var progress = $("#doitprogress");
+
+            yesButton.click(function () {
+                yesButton.button("loading");
+
+                var counter = 0;
+                var countDown = function () {
+                    counter++;
+                    if (counter == 11) {
+                        yesButton.button("reset");
+                        theModal.modal("hide");
+                    }
+                    else {
+                        progress.width(counter * 10 + "%");
+                        setTimeout (countDown, 500);
+                    }
+                };
+                setTimeout (countDown, 500);       
+            });
+
+            //Tooltip
+            $("a[rel='tooltip']").tooltip();
+            //Popover
+            $("a[rel='popover']").popover({ placement: "right" })
+                                //To prevent losing the scroll position. It says to the event that is passed in, to not run the default action.
+                                 .click(function (e) { e.preventDefault() });
+
+        });
+    </script>
+
+</body>
+</html>

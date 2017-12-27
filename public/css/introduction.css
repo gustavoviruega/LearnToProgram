@@ -1,3 +1,7 @@
+#carousel {
+  background-color: red;
+}
+
 /*Overriding bootstrap*/
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: lightsteelblue;
@@ -7,6 +11,19 @@
   background-color:palevioletred;
 }
 
-img {
-    margin: 0 0 10px 0;
+img.center {
+    display: block;
+    margin: 10px auto;
+}
+
+/*Overriding bootstrap classes using Mediaquery*/
+@media (min-width: 540px) and (max-width:720px) {
+    
+    .page-header {
+        border-bottom: 2px dotted
+    }
+
+    .well {
+        border: 2px solid black;
+    }
 }
